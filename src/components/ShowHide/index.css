@@ -1,4 +1,6 @@
 /* Write your CSS here */
+/* Write your CSS here */
+
 .bg-container {
   background-image: linear-gradient(to right, #fa7257, #fc63a7);
   height: 100vh;
@@ -19,10 +21,16 @@
   border-width: 0px;
   margin: 60px;
 }
-.cards-container {
+.container {
   display: flex;
-  justify-content: space-between;
 }
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .card-container {
   display: flex;
   width: 300px;
