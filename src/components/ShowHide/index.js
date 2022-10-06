@@ -1,10 +1,12 @@
 // Write your code here
+// Write your code here
+
 import {Component} from 'react'
 
 import './index.css'
 
 class ShowHide extends Component {
-  state = {key1: true, key2: true}
+  state = {key1: false, key2: false}
 
   onFirstname = () => {
     this.setState(prevState => ({key1: !prevState.key1}))
@@ -36,18 +38,19 @@ class ShowHide extends Component {
     return (
       <div className="bg-container">
         <h1 className="heading">Show/Hide</h1>
-        <div className="button-container">
-          <button className="btn" onClick={this.onFirstname}>
-            Show/Hide Firstname
-          </button>
-
-          <button className="btn" onClick={this.onLastname}>
-            Show/Hide Lastname
-          </button>
-        </div>
-        <div className="cards-container">
-          {firstname}
-          {lastname}
+        <div className="container">
+          <div className="button-container">
+            <button className="btn" type="button" onClick={this.onFirstname}>
+              Show/Hide Firstname
+            </button>
+            {firstname}
+          </div>
+          <div className="button-container">
+            <button className="btn" type="button" onClick={this.onLastname}>
+              Show/Hide Lastname
+            </button>
+            {lastname}
+          </div>
         </div>
       </div>
     )
